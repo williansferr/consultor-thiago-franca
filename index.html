@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html >
+<title>Consultor Fitness Thiago França</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script type="text/javascript" language="javascript" src="javascript/jquery.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-blue w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">Inicio</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-graduation-cap"></i> SOBRE</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-group"></i> CONSULTORIA</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-comments-o"></i> DEPOIMENTOS</a>
+      <a href="#duvidas" class="w3-bar-item w3-button"><i class="fa fa-question-circle"></i> DÚVIDAS</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-question-circle"></i> PACOTES</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTATO</a>
+      <a href="#login" class="w3-bar-item w3-button"><i class="fa fa-user-circle"></i> LOGIN</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">SOBRE</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">CONSULTORIA</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">DEPOIMENTOS</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PACOTES</a>
+  <a href="#duvidas" onclick="w3_close()" class="w3-bar-item w3-button">DÚVIDAS</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTATO</a>
+  <a href="#login" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-xxlarge w3-hide-small w3-red">THIAGO FRANÇA</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium w3-red">THIAGO FRANÇA</span><br>
+    <span class="w3-xlarge w3-blue">CONSULTOR FITNESS</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off w3-hide-small">Especialista em emagrecimento para mulheres</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container" id="about">
+    <!-- <h3 class="w3-center w3-red title-section" id="initial-name">THIAGO FRANÇA</h3> -->
+    <div class="w3-half bgimg-about w3-grayscale-max">
+        <img src="./img/thiago2-1.jpg" id="imagem-about" class="w3-round-xxlarge">  
+    </div>
+    <div class="w3-half w3-center w3-border-grey">
+      <i class="fa fa-graduation-cap w3-margin-bottom w3-xxlarge about-logo w3-hide-small" ></i>
+      <p class="w3-large w3-center w3-hover-shadow curriculum">Graduado em Ciencias do Esporte, Bacharel em Educação Física e  Especialista em Emagrecimento (UEL - Universidade Estadual de Londrina)</p>
+      <p class="font">"Você não precisa treinar muito, precisa treinar certo!"</p>
+      <ul class="lista">
+        <li class="linha-li">
+          <a href="https://www.instagram.com/personalthiagofranca/" target="_blank"><i class="fa fa-instagram w3-large w3-hover-opacity"> personalthiagofranca</i> </a> 
+        </li>
+        <li class="linha-li">
+          <a href="https://www.facebook.com/thiago.franca.23" target="_blank"><i class="fa fa-facebook-square w3-large w3-hover-opacity"> Thiago França</i> </a> 
+        </li>
+        <li class="linha-li">
+          <a href="href="mailto:tfranca.personal@gmail.com" target="_blank"><i class="fa fa-envelope w3-large w3-hover-opacity"> tfranca.personal@gmail.com</i> </a> 
+        </li>
+      </ul>
+    </div>
+</div>
+
+
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:100px 16px" id="team">
+  <h4 class="w3-center w3-black title-section">O QUE É CONSULTORIA ONLINE?</h4>
+  <p class="w3-center w3-panel w3-large">É um guia simples, definitivo e personalizado para otimizar o processo de emagrecimento e ou ganho de massa muscular, sem a necessidade de desperdiçar horas na academia, sendo realizado online ou utilizando vários outros meios de comunicação para que possa haver um bom entendimento e acompanhamento do treino.
+  </p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <!-- <img src="/img/thiago1.jpg" alt="Paradigma" style="width:100%; min-height: 200px"> -->
+        <div class="w3-container">
+        <i class="material-icons icons" style="font-size:48px;">help_outline</i>
+          <h3>Paradigma</h3>
+          <p class="w3-opacity">Você está fazendo errado!</p>
+          <p>Estudos científicos veem mostrando que treinando com a intensidade correta(isso inclui peso, amplitude, cadência, descanso) não é possível manter o número de repetições durante as séries.
+            Se você vai na academia e faz 3x15 com o mesmo peso em todas as séries seu treino é muito ruim, pois vc não está dando o mínimo de intensidade necessária para fazer um bom treino.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <div class="w3-container w3-q">
+        <i class="material-icons icons" style="font-size:48px;">stay_current_portrait</i>
+          <h3>Suporte 24h</h3>
+          <p class="w3-opacity">Dúvidas? Me Contacte</p>
+          <p>Todos os alunos terão acesso e suporte integral via whatsapp, a qualquer hora do dia e diretamente comigo. Isso é extremamente importante para que eu lhe ajude durante todo o processo e, principalmente, nas explicações de toda a prescrição.</p>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <div class="w3-container w3-q">
+        <i class="material-icons icons" style="font-size:48px;">assignment_turned_in</i>
+          <h3>Possibilita Resultados</h3>
+          <p class="w3-opacity">Visivelmente Perceptivel</p>
+          <p>Quando se tem um treino exclusivo para você, tudo muda. O profissional sabe exatamente quais suas necessidades e objetivos. Através da Consultoria, vamos ‘’atirar no alvo ‘’ certo. Utilizando estratégias que funcionam e são eficazes gerando resultados mais rápidos e sustentáveis.</p>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <div class="w3-container">
+          <i class="material-icons icons" style="font-size:48px;">query_builder</i>
+          <h3>Sem Perda de Tempo</h3>
+          <p class="w3-opacity">Treinos rápidos</p>
+          <p>Pode-se fazer um treino excelente de 20 a 40 min, com 3 ou 4 exercícios. Porém ele precisa estar bem planejado e ser executado na intensidade correta. O volume(quantidade) do seu treino não precisa ser grande se a intensidade estiver correta. Isso possibilita realizar treinos curtos, mais dinâmicos, que vão aumentar sua aderência e consequentemente seus resultados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-black w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-large">Melhores Resultados</span>
+    <!-- <br>Partners -->
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-large">Acompanhamento</span>
+    <!-- <br>Projects Done -->
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-large">Treinos Diversificados</span>
+    <!-- <br>Happy Clients -->
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-large">Qualidade de Vida</span>
+    <!-- <br>Meetings -->
+  </div>
+</div>
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:100px 16px" id="work">
+  <p class="w3-center w3-large"></p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-content w3-display-container" style="max-width:600px">
+      <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/thiago1.jpg" style="width:100%">
+      <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/thiago2.jpg" style="width:100%">
+      <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/thiago5.jpg" style="width:100%">
+      <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/thiago3.jpg" style="width:100%">
+      <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+      <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+      <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<!-- DUVIDAS FREQUENTES -->
+<div class="w3-container w3-center w3-padding-64" id="duvidas">
+  <h3 class="">DÚVIDAS FREQUENTES</h3>
+  <div class="">
+    <button onclick="myFunction('demo1')" class="w3-button w3-block w3-black w3-left-align w3-padding-16">O que é Cadência?</button>
+    <div id="demo1" class="w3-hide w3-container">
+        <p class="w3-left-align info-doubt">
+          A cadência consiste na velocidade de execução do movimento ou, basicamente, no tempo que se leva para realizar uma única repetição.
+          Hoje, sabe-se que algumas variáveis como o número de séries e repetições, tempo de descanso, amplitude do movimento e a velocidade de execução (cadência) podem ser manipuladas de acordo com as características individuais dos praticantes e em prol de objetivos específicos.
+          Dentre esses fatores, a cadência possui um papel fundamental, e agora iremos entender didaticamente como essa variável pode ser aplicada...
+
+        </p>
+    </div>
+
+    <button onclick="myFunction('demo2')" class="w3-button w3-block w3-blue w3-left-align w3-padding-16">É necessário treinar todos os dias para um bom resultado?</button>
+    <div id="demo2" class="w3-hide w3-container">
+        <p class="w3-left-align info-doubt">
+        Não, você pode ter resultados treinando 1, 2, 3 vezes na semana. Minha função é planejar e traçar o melhor caminho a ser seguido, de acordo com sua realidade atual.
+      </p>
+    </div>
+  </div>
+  <div class="">
+    <button onclick="myFunction('demo3')" class="w3-button w3-block w3-black w3-left-align w3-padding-16">Quando é necessário aumentar ou diminuir os pesos?</button>
+    <div id="demo3" class="w3-hide w3-container">
+        <p class="w3-left-align info-doubt">
+        Na prescrição do treino, foi passado uma intensidade específica que você deve chegar independente do número de repetições, e também foi passado uma margem de repetições. Se para intensidade estabelecida você ficar fora da margem de repetições, você vai ajustar o peso, aumentando ou diminuindo. É tentativa e erro, mas em poucas sessões você vai saber os pesos ideias e fazer as alterações necessárias. É fundamental que a intensidade do treino sempre seja respeitada.
+      </p>
+    </div>
+
+    <button onclick="myFunction('demo4')" class="w3-button w3-block w3-blue w3-left-align w3-padding-16">Tem como flexibilizar os dias de treinos?</button>
+    <div id="demo4" class="w3-hide w3-container">
+        <p class="w3-left-align info-doubt">Sim, se você respeitar o intervalo estabelecido entre os treinos, pode fazer qualquer dia. Ex: treino de superiores é segunda e quinta (3 dias de intervalo).</p>
+    </div>
+    <button onclick="myFunction('demo5')" class="w3-button w3-block w3-black w3-left-align w3-padding-16  ">Por que os treinos são de curta duração</button>
+    <div id="demo5" class="w3-hide w3-container">
+        <p class="w3-left-align info-doubt">Já está mais que comprovado que treinos de curta duração trazem os mesmos resultados de treinos longos ou até mais. Para o exercício te ajudar a buscar você a alcançar seus objetivos, é importante continuidade e aderência ao programa, treinos longos tem pouca aderência. Treinos curtos e dinâmicos facilitam a aderência ao programa de treinamento, facilitando a obtenção de resultados, e poupando o que a maioria das pessoas alegam não ter, TEMPO.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Skills Section -->
+<div class="w3-container w3-light-grey w3-padding-64" id="skills">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Comunicação</h3>
+      <p>Atualmente a melhor forma de comunicação é o celular contanto com wifi ou dados moveis, os aplicativos de mensagens fornecem melhor maneira de comunicação.</p>
+    </div>
+    <div class="w3-col m6">
+      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Whasapp</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:90%">99%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Celular</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:85%">80%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Email</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:75%">25%</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pricing Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:90px 10px" id="pricing">
+  <h3>PACOTES</h3>
+  <p class="w3-large">Escolha o pacote que melhor lhe agradar.</p>
+  <div class="w3-row-padding" style="margin-top:60px">
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-red w3-xlarge w3-padding-32">Basico</li>
+        <li class="w3-padding-16">Duração de 30 dias</li>
+        <li class="w3-padding-16">Direito a 1 treino</li>
+        <li class="w3-padding-16">Suporte via WhatsApp</li>
+        <li class="w3-padding-16">Acesso ao aplicativo</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">R$ 89</h2>
+          <span class="w3-opacity">Mensal</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Contratar</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-blue w3-xlarge w3-padding-48">Pro</li>
+        <li class="w3-padding-16">Duração de 90 dias</li>
+        <li class="w3-padding-16">Direito a 3 treinos</li>
+        <li class="w3-padding-16">Suporte via WhatsApp</li>
+        <li class="w3-padding-16">Acesso ao aplicativo</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">R$ 149</h2>
+          <span class="w3-opacity">Trimestral</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Contratar</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-white w3-xlarge w3-padding-32">Premium</li>
+        <li class="w3-padding-16">Duração de 180 dias</li>
+        <li class="w3-padding-16">Direito a 6 treinos</li>
+        <li class="w3-padding-16">Suporte via WhatsApp</li>
+        <li class="w3-padding-16">Acesso ao aplicativo</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">R$ 559</h2>
+          <span class="w3-opacity">Semestral</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Contratar</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTATO</h3>
+  <!-- <p class="w3-center w3-large">Lets get in touch. Send us a message:</p> -->
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Londrina, PR</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Fone: 43 96471706</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: tfranca.personal@gmail.com</p>
+      <br>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-border" type="text" placeholder="Nome" required name="Nome"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Assunto" required name="Assunto"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Mensagem" required name="Mensagem"></p>
+        <p>
+          <button class="w3-button w3-black" type="submit">
+            <i class="fa fa-paper-plane"></i> Enviar
+          </button>
+        </p>
+      </form>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Ir para o inicio</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Copyright © 2017 <a href="https://www.facebook.com/Willians.Ferreira.Silva" title="W3.CSS" target="_blank" class="w3-hover-text-green">Willians Ferreira</a></p>
+</footer>
+ 
+<!-- Add Google Maps -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+<script src="js/consultor.js"></script>
+</body>
+</html>

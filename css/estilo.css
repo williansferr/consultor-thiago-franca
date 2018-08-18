@@ -1,0 +1,115 @@
+
+body,h1,h2,h3,h4,h5,h6 {
+	font-family: "Raleway", sans-serif
+}
+
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/unsplashFit7.jpg");
+    /*background-image: url("/img/thiago1.jpg");*/
+    /*background-image: url("/img/thiago2.jpg");*/
+    width: 100%;
+    min-height: 100%;
+}
+
+.bgimg-about {
+    background-size: cover;
+    padding: 8%;
+    border-radius: 20px!important;
+}
+
+#imagem-about{
+	width:100%;
+}
+
+.about-logo{
+	padding: 5%;
+}
+
+.w3-bar .w3-button {
+    padding: 16px;
+}
+
+#about{
+	padding:50px 16px;
+}
+
+span.w3-xxlarge .w3-red .w3-hide-small{
+	background-color: blue!important;
+}
+
+.curriculum{
+	font-family: 'Sawarabi Mincho', sans-serif;
+	padding: 3%;
+	/*width: 45%;*/
+	margin: 2%;
+	/*color: grey;*/
+	/*border: 0.5px solid;*/
+}
+
+.lista{
+	list-style-type: none!important;
+	padding: 8%;
+
+}
+
+.linha-li{
+	padding: 2%;
+	text-align: center;
+/*	float: left;
+*/}
+
+.local_esq {
+	float:left;
+}
+.local_dir {
+	float:right;
+}
+.local_bottom {
+	display:inline;
+	list-style-type:none;
+	clear:both;
+}
+#initial-name{
+	width: 100%;
+	border-radius: 5px;
+}
+
+.icons{
+	position: relative;
+	left: 15%!important;
+
+}
+
+.imagens-personal{
+	height: 550px!important;
+}
+
+.title-section{
+	padding: 8px;
+}
+
+#duvidas{
+
+	padding: 15%;
+}
+
+#skills{
+	padding: 15%;
+	border-bottom: 20%;
+}
+
+.font{
+	color: red;
+}
+
+.info-doubt{
+	padding: 2%;
+
+}
