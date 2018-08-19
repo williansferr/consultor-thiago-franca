@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html >
+<html>
 <title>Consultor Fitness Thiago França</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="css/bootstrap.min.css"> 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
@@ -16,7 +16,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
-<body>
+<body >
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -24,7 +24,7 @@
     <a href="#home" class="w3-bar-item w3-button w3-wide">Inicio</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-graduation-cap"></i> SOBRE</a>
+      <a href="#about" class="w3-bar-item w3-button" id="sobre"><i class="fa fa-graduation-cap" ></i> SOBRE</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-group"></i> CONSULTORIA</a>
       <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-comments-o"></i> DEPOIMENTOS</a>
       <a href="#duvidas" class="w3-bar-item w3-button"><i class="fa fa-question-circle"></i> DÚVIDAS</a>
@@ -70,11 +70,11 @@
   </div>
 </header>
 
-<!-- About Section -->
-<div class="w3-container" id="about">
+<!-- About   Section -->
+<div class="w3-container" id="about" onfocus="loadPage()">
     <!-- <h3 class="w3-center w3-red title-section" id="initial-name">THIAGO FRANÇA</h3> -->
-    <div class="w3-half bgimg-about w3-grayscale-max">
-        <img src="./img/thiago2-1.jpg" id="imagem-about" class="w3-round-xxlarge">  
+    <div class="w3-half bgimg-about w3-grayscale-max" onfocus="loadPage()">
+        <img src="/img/thiago2-1.jpg" id="imagem-about" class="w3-round-xxlarge" onfocus="loadPage()">  
     </div>
     <div class="w3-half w3-center w3-border-grey">
       <i class="fa fa-graduation-cap w3-margin-bottom w3-xxlarge about-logo w3-hide-small" ></i>
@@ -365,7 +365,7 @@
  
 <!-- Add Google Maps -->
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
 <!--
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
