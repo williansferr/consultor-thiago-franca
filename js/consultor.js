@@ -1,48 +1,50 @@
 var slideIndex = 1;
-showDivs(slideIndex);
 var path_imgTh = "./img/thiago2-1.jpg";
 var myIndex = 0;
-carousel();
-
-
-
-document.getElementById('home').addEventListener("mouseenter", function(){
-  view_span_left();
-});
-
-document.getElementById('myNavbar').addEventListener("mouseenter", function(){
-  view_span_top();
-  $( "#imagem-about" ).attr( "src", path_imgTh);
-
-});
-
-document.getElementById('myNavbar').addEventListener("mouseleave", function(){
-  $( "#imagem-about" ).attr( "src", path_imgTh );
-
-});
-
 var loadElement_sobre = $('#sobre');
 var loadElement_about = $('#about');
 
+
+//chama metodo carousel para slide shows e realizar a indexação das imagens
+showDivs(slideIndex);
+carousel();
+
+//Ouvintes de ações para tela inicial
+$( "#imagem-about" ).attr( "src", "");
+document.getElementById('dropdown-login').addEventListener("mouseleave", function(){
+  var dropdown = document.getElementById('dropdown-login');
+    dropdown.className = dropdown.className.replace(" w3-show", "");
+});
+document.getElementById('about').addEventListener("mouseenter", function(){
+  view_span_left();
+});
+document.getElementById('myNavbar').addEventListener("mouseenter", function(){
+  view_span_top();
+  $( "#imagem-about" ).attr( "src", path_imgTh);
+});
+document.getElementById('myNavbar').addEventListener("mouseleave", function(){
+  $( "#imagem-about" ).attr( "src", path_imgTh );
+});
 loadElement_sobre.on('click',function(){
   load_img_about_top();
 })
-
-$( "#imagem-about" ).attr( "src", "");
-
+loadElement_sobre.on('ontouchmove',function(){
+  load_img_about_top();
+})
+loadElement_about.on('ontouchmove',function(){
+  load_img_about_top();
+})
 loadElement_about.on('mouseenter',function(){
   setTimeout(function(){
     load_img_about_left();
   },1000);
 })
-
 loadElement_about.on('mouseleave',function(){
   $( "#imagem-about" ).attr( "src", "");
 })
 
 
-
-
+//Metodo carousel
 function carousel() {
     var i;
     var x = document.getElementsByClassName("mySlides");
@@ -55,8 +57,9 @@ function carousel() {
     setTimeout(carousel, 3000); // Change image every 2 seconds
 }
 
+//indexação de imagens
 function plusDivs(n) {
-  showDivs(slideIndex += n);
+    showDivs(slideIndex += n);
 }
 
 function currentDiv(n) {
@@ -79,21 +82,21 @@ function showDivs(n) {
   dots[slideIndex-1].className += " w3-white";
 }
 
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+// function myMap()
+// {
+//   myCenter=new google.maps.LatLng(41.878114, -87.629798);
+//   var mapOptions= {
+//     center:myCenter,
+//     zoom:12, scrollwheel: false, draggable: false,
+//     mapTypeId:google.maps.MapTypeId.ROADMAP
+//   };
+//   var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
 
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
+//   var marker = new google.maps.Marker({
+//     position: myCenter,
+//   });
+//   marker.setMap(map);
+// }
 
 // Modal Image Gallery
 function onClick(element) {
@@ -139,9 +142,9 @@ function myFunction(id) {
 function load_img_about_left(){
   $( "#imagem-about" ).attr( "src", path_imgTh);
   var img_thiago = document.getElementById('imagem-about');
-  img_thiago.classList.add('w3-animate-left');
+  img_thiago.classList.add('w3-animate-zoom');
   setTimeout(function(){
-  img_thiago.classList.remove('w3-animate-left');
+  img_thiago.classList.remove('w3-animate-zoom');
   },200);
 
 }
@@ -175,5 +178,18 @@ function view_span_left(){
 }
 
 
+function show_dropdown() {
+    var x = document.getElementById("dropdown-login");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
 
+function closeDropdown(){
+   var x = document.getElementById("dropdown-login");
+    x.className = x.className.replace(" w3-show", "");
+
+}
 

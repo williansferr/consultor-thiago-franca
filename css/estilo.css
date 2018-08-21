@@ -14,12 +14,11 @@ body, html {
     line-height: 1.8;
 }
 /* Full height image header */
+
 .bgimg-1 {
     background-position: center;
     background-size: cover;
     background-image: url("../img/unsplashFit7-c.jpg");
-    /*background-image: url("/img/thiago1.jpg");*/
-    /*background-image: url("/img/thiago2.jpg");*/
     width: 100%;
     min-height: 100%;
 }
@@ -103,7 +102,7 @@ span.w3-xxlarge .w3-red .w3-hide-small{
 
 #duvidas{
 
-	padding: 15%;
+	/*padding: 15%;*/
 }
 
 #skills{
@@ -120,9 +119,40 @@ span.w3-xxlarge .w3-red .w3-hide-small{
 
 }
 
-@media (min-width: 600px) {
-	#contact{
-		width: 		
-	}
+#work{
 	
 }
+
+.mural-slideshow{
+	margin: 0.2px solid;
+	max-width: 60%!important;
+	/*max-height: 10%!important;*/
+
+}
+
+
+
+@media (max-width: 500px){
+#duvidas button{
+	font-size: 13px;
+	}
+	#duvidas h3 {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 360px){
+	#duvidas button{
+		font-size: 10px;
+	}
+	#duvidas p{
+		font-size: 10px;
+	}
+
+	#duvidas h3 {
+		font-size: 20px;
+	}
+
+}
+
+

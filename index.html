@@ -18,9 +18,34 @@
 
 <body >
 
+
+
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-blue w3-card" id="myNavbar">
+      <div class="w3-dropdown-click">
+        <button onclick="show_dropdown()" class="w3-button"><i  class="fa fa-user-circle"></i> LOGIN</button>
+          <div id="dropdown-login" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+            <form action="/action_page.php" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
+                <h3 class="w3-center">Acessar Sistema</h3>
+                <div class="w3-row w3-section">
+                  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+                    <div class="w3-rest">
+                      <input class="w3-input w3-border" name="first" type="text" placeholder="Login">
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-key"></i></div>
+                    <div class="w3-rest">
+                      <input class="w3-input w3-border" name="last" type="text" placeholder="Senha">
+                    </div>
+                </div>
+                <button class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding">Acessar  </button>
+                <button class="w3-button w3-block w3-tiny w3-section w3-black w3-padding w3-round">Recuperar Senha  </button>
+                </form>
+          </div>
+      </div>
     <a href="#home" class="w3-bar-item w3-button w3-wide">Inicio</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
@@ -30,7 +55,6 @@
       <a href="#duvidas" class="w3-bar-item w3-button"><i class="fa fa-question-circle"></i> DÚVIDAS</a>
       <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-question-circle"></i> PACOTES</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTATO</a>
-      <a href="#login" class="w3-bar-item w3-button"><i class="fa fa-user-circle"></i> LOGIN</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -40,9 +64,11 @@
   </div>
 </div>
 
+
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#home" class="w3-bar-item w3-button w3-wide">Inicio</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">SOBRE</a>
   <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">CONSULTORIA</a>
   <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">DEPOIMENTOS</a>
@@ -58,7 +84,7 @@
     <span class="w3-xxlarge w3-hide-small w3-red">THIAGO FRANÇA</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium w3-red">THIAGO FRANÇA</span><br>
     <span class="w3-xlarge w3-blue">CONSULTOR FITNESS</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off w3-hide-small">Especialista em emagrecimento para mulheres</a></p>
+    <p><a class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off w3-hide-small">Especialista em emagrecimento para mulheres</a></p>
   </div> 
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -125,6 +151,7 @@
           <p>Todos os alunos terão acesso e suporte integral via whatsapp, a qualquer hora do dia e diretamente comigo. Isso é extremamente importante para que eu lhe ajude durante todo o processo e, principalmente, nas explicações de toda a prescrição.</p>
           <br>
           <br>
+          <br>
         </div>
       </div>
     </div>
@@ -174,11 +201,10 @@
 </div>
 
 <!-- Work Section -->
-<div class="w3-container" style="padding:100px 16px" id="work">
-  <p class="w3-center w3-large"></p>
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-content w3-display-container" style="max-width:600px">
-      <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/thiago1.jpg" style="width:100%">
+<div class="w3-container" style="padding:20px 1px" id="work">
+  <p class="w3-center"></p>
+  <div class="w3-row-padding border-slide-mural" style="">
+    <div class="w3-content w3-display-container  mural-slideshow" >
       <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/thiago2.jpg" style="width:100%">
       <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/thiago5.jpg" style="width:100%">
       <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/thiago3.jpg" style="width:100%">
@@ -205,11 +231,11 @@
 
 <!-- DUVIDAS FREQUENTES -->
 <div class="w3-container w3-center w3-padding-64" id="duvidas">
-  <h3 class="">DÚVIDAS FREQUENTES</h3>
+  <h4 class="w3-container w3-light-grey w3-padding-16">DÚVIDAS FREQUENTES</h4>
   <div class="">
     <button onclick="myFunction('demo1')" class="w3-button w3-block w3-black w3-left-align w3-padding-16">O que é Cadência?</button>
     <div id="demo1" class="w3-hide w3-container">
-        <p class="w3-left-align info-doubt">
+        <p class="w3-left-align info-doubt w3-animate-zoom">
           A cadência consiste na velocidade de execução do movimento ou, basicamente, no tempo que se leva para realizar uma única repetição.
           Hoje, sabe-se que algumas variáveis como o número de séries e repetições, tempo de descanso, amplitude do movimento e a velocidade de execução (cadência) podem ser manipuladas de acordo com as características individuais dos praticantes e em prol de objetivos específicos.
           Dentre esses fatores, a cadência possui um papel fundamental, e agora iremos entender didaticamente como essa variável pode ser aplicada...
@@ -219,7 +245,7 @@
 
     <button onclick="myFunction('demo2')" class="w3-button w3-block w3-blue w3-left-align w3-padding-16">É necessário treinar todos os dias para um bom resultado?</button>
     <div id="demo2" class="w3-hide w3-container">
-        <p class="w3-left-align info-doubt">
+        <p class="w3-left-align info-doubt w3-animate-zoom">
         Não, você pode ter resultados treinando 1, 2, 3 vezes na semana. Minha função é planejar e traçar o melhor caminho a ser seguido, de acordo com sua realidade atual.
       </p>
     </div>
@@ -227,18 +253,19 @@
   <div class="">
     <button onclick="myFunction('demo3')" class="w3-button w3-block w3-black w3-left-align w3-padding-16">Quando é necessário aumentar ou diminuir os pesos?</button>
     <div id="demo3" class="w3-hide w3-container">
-        <p class="w3-left-align info-doubt">
+        <p class="w3-left-align info-doubt w3-animate-zoom">
         Na prescrição do treino, foi passado uma intensidade específica que você deve chegar independente do número de repetições, e também foi passado uma margem de repetições. Se para intensidade estabelecida você ficar fora da margem de repetições, você vai ajustar o peso, aumentando ou diminuindo. É tentativa e erro, mas em poucas sessões você vai saber os pesos ideias e fazer as alterações necessárias. É fundamental que a intensidade do treino sempre seja respeitada.
       </p>
     </div>
 
     <button onclick="myFunction('demo4')" class="w3-button w3-block w3-blue w3-left-align w3-padding-16">Tem como flexibilizar os dias de treinos?</button>
     <div id="demo4" class="w3-hide w3-container">
-        <p class="w3-left-align info-doubt">Sim, se você respeitar o intervalo estabelecido entre os treinos, pode fazer qualquer dia. Ex: treino de superiores é segunda e quinta (3 dias de intervalo).</p>
+        <p class="w3-left-align info-doubt w3-animate-zoom">Sim, se você respeitar o intervalo estabelecido entre os treinos, pode fazer qualquer dia. Ex: treino de superiores é segunda e quinta (3 dias de intervalo).</p>
     </div>
     <button onclick="myFunction('demo5')" class="w3-button w3-block w3-black w3-left-align w3-padding-16  ">Por que os treinos são de curta duração</button>
     <div id="demo5" class="w3-hide w3-container">
-        <p class="w3-left-align info-doubt">Já está mais que comprovado que treinos de curta duração trazem os mesmos resultados de treinos longos ou até mais. Para o exercício te ajudar a buscar você a alcançar seus objetivos, é importante continuidade e aderência ao programa, treinos longos tem pouca aderência. Treinos curtos e dinâmicos facilitam a aderência ao programa de treinamento, facilitando a obtenção de resultados, e poupando o que a maioria das pessoas alegam não ter, TEMPO.</p>
+
+       <p class="w3-left-align info-doubt w3-animate-zoom">Já está mais que comprovado que treinos de curta duração trazem os mesmos resultados de treinos longos ou até mais. Para o exercício te ajudar a buscar você a alcançar seus objetivos, é importante continuidade e aderência ao programa, treinos longos tem pouca aderência. Treinos curtos e dinâmicos facilitam a aderência ao programa de treinamento, facilitando a obtenção de resultados, e poupando o que a maioria das pessoas alegam não ter, TEMPO.</p>
     </div>
   </div>
 </div>
@@ -324,16 +351,16 @@
 </div>
 
 <!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+<div class="w3-content w3-light-grey" style="padding:128px 16px" id="contact">
   <h3 class="w3-center">CONTATO</h3>
   <!-- <p class="w3-center w3-large">Lets get in touch. Send us a message:</p> -->
   <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-half">
+    <div class="w3-content">
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Londrina, PR</p>
       <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Fone: 43 96471706</p>
       <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: tfranca.personal@gmail.com</p>
       <br>
-      <form action="/action_page.php" target="_blank">
+      <form class="w3-content">
         <p><input class="w3-input w3-border" type="text" placeholder="Nome" required name="Nome"></p>
         <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
         <p><input class="w3-input w3-border" type="text" placeholder="Assunto" required name="Assunto"></p>
@@ -362,14 +389,7 @@
   </div>
   <p>Copyright © 2017 <a href="https://www.facebook.com/Willians.Ferreira.Silva" title="W3.CSS" target="_blank" class="w3-hover-text-green">Willians Ferreira</a></p>
 </footer>
- 
-<!-- Add Google Maps -->
 
-
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
 <script src="js/consultor.js"></script>
 </body>
 </html>
