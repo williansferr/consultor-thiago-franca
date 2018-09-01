@@ -93,7 +93,9 @@ span.w3-xxlarge .w3-red .w3-hide-small{
 }
 
 .imagens-personal{
-	height: 550px!important;
+	/*margin-left: 0%!important;*/
+	width: 100!important;
+	height: 500px!important;
 }
 
 .title-section{
@@ -124,7 +126,15 @@ span.w3-xxlarge .w3-red .w3-hide-small{
 }
 
 .mural-slideshow{
-	margin: 0.2px solid;
+	/*margin-top: 1%;*/
+	/*margin-left: 0;*/
+	/*margin-right: 0;*/
+	/*margin-bottom: 0;*/
+	margin:0;
+	margin-top: 2%;
+	margin-bottom: 4%;
+	position: relative;
+	/*padding: 1%!important;*/
 	max-width: 60%!important;
 	/*max-height: 10%!important;*/
 

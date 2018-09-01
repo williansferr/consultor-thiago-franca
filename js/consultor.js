@@ -1,8 +1,63 @@
+var one = $('#pricing ul').slice(0,1);
+var second = $('#pricing ul').slice(1,2);
+var third = $('#pricing ul').slice(2,3);
 var slideIndex = 1;
 var path_imgTh = "./img/thiago2-1.jpg";
 var myIndex = 0;
-var loadElement_sobre = $('#sobre');
-var loadElement_about = $('#about');
+
+var loadElement_about = document.getElementById('about');
+var loadElement_sobre = document.getElementById('sobre');
+var loadElement_price = document.getElementById('pricing');
+var loadElement_price = document.getElementById('pricing');
+
+loadElement_about.ontouchmove = metodo_event_element_about;
+loadElement_about.onmouseenter = metodo_event_element_about;
+loadElement_about.onmouseleave = metodo_event_element_about;
+
+loadElement_sobre.onclick = metodo_element_sobre;
+loadElement_sobre.ontouchmove = metodo_element_sobre;
+
+loadElement_price.onmouseenter = metodo_event_tabela_precos;
+
+// document.onkeyup = listener;
+
+var $doc = $('html, body');
+$('a').click(function() {
+    $doc.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 800);
+    return false;
+});
+
+function metodo_event_tabela_precos(e){
+  if(e.type === "mouseenter" ){
+    adicionaEfeitoTabelaPrecos();
+  }
+
+}
+
+function metodo_event_element_about(e) {
+
+ if(e.type === "touchmove"){
+    load_img_about_top();
+ 
+  }else if(e.type === "mouseenter"){
+    setTimeout(function(){
+      load_img_about_left();
+    },1000);
+  
+  }else if( e.type === "onmouseleave"){
+  $( "#imagem-about" ).attr( "src", "");
+  }
+}
+
+function metodo_element_sobre(e){
+  if(e.type === "click"){
+    load_img_about_top();
+  }else if(e.type === "touchmove"){
+    load_img_about_top();
+  }
+}
 
 
 //chama metodo carousel para slide shows e realizar a indexação das imagens
@@ -11,9 +66,20 @@ carousel();
 
 //Ouvintes de ações para tela inicial
 $( "#imagem-about" ).attr( "src", "");
-document.getElementById('dropdown-login').addEventListener("mouseleave", function(){
-  var dropdown = document.getElementById('dropdown-login');
-    dropdown.className = dropdown.className.replace(" w3-show", "");
+
+var dropdown_login = document.getElementById('dropdown-login');
+dropdown_login.onmouseleave = metodo_eventOnDropdown;
+
+function metodo_eventOnDropdown(e){
+  if(e.type === "mouseleave"){
+    var dropdown = document.getElementById('dropdown-login');
+      dropdown.className = dropdown.className.replace(" w3-show", "");
+  }
+}
+
+
+
+document.getElementById('dropdown-login').addEventListener("click", function(){
 });
 document.getElementById('about').addEventListener("mouseenter", function(){
   view_span_left();
@@ -25,23 +91,6 @@ document.getElementById('myNavbar').addEventListener("mouseenter", function(){
 document.getElementById('myNavbar').addEventListener("mouseleave", function(){
   $( "#imagem-about" ).attr( "src", path_imgTh );
 });
-loadElement_sobre.on('click',function(){
-  load_img_about_top();
-})
-loadElement_sobre.on('ontouchmove',function(){
-  load_img_about_top();
-})
-loadElement_about.on('ontouchmove',function(){
-  load_img_about_top();
-})
-loadElement_about.on('mouseenter',function(){
-  setTimeout(function(){
-    load_img_about_left();
-  },1000);
-})
-loadElement_about.on('mouseleave',function(){
-  $( "#imagem-about" ).attr( "src", "");
-})
 
 
 //Metodo carousel
@@ -54,7 +103,7 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    
     x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 3000); // Change image every 2 seconds
+    setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 
 //indexação de imagens
@@ -81,22 +130,6 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " w3-white";
 }
-
-// function myMap()
-// {
-//   myCenter=new google.maps.LatLng(41.878114, -87.629798);
-//   var mapOptions= {
-//     center:myCenter,
-//     zoom:12, scrollwheel: false, draggable: false,
-//     mapTypeId:google.maps.MapTypeId.ROADMAP
-//   };
-//   var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-//   var marker = new google.maps.Marker({
-//     position: myCenter,
-//   });
-//   marker.setMap(map);
-// }
 
 // Modal Image Gallery
 function onClick(element) {
@@ -146,7 +179,6 @@ function load_img_about_left(){
   setTimeout(function(){
   img_thiago.classList.remove('w3-animate-zoom');
   },200);
-
 }
 
 function load_img_about_top(){
@@ -190,6 +222,47 @@ function show_dropdown() {
 function closeDropdown(){
    var x = document.getElementById("dropdown-login");
     x.className = x.className.replace(" w3-show", "");
-
 }
 
+
+function adicionaEfeitoTabelaPrecos(){
+    setTimeout(function(){ one.addClass('w3-animate-top'); }, 1000);
+    setTimeout(function(){ second.addClass('w3-animate-left'); }, 2000);
+    setTimeout(function(){ third.addClass('w3-animate-bottom'); }, 3000);
+    removeClassOnTabelaPrecos();
+      
+  }   
+
+function removeClassOnTabelaPrecos(){
+  setTimeout(function(){ 
+    managerClassInHTML(one,'w3-animate-top',0);
+    managerClassInHTML(second,'w3-animate-left',0);
+    managerClassInHTML(third,'w3-animate-bottom',0);
+  }, 3500);
+}       
+
+// Adicionar ou remover Class no elemento
+function managerClassInHTML(elemento, nameOfClass, addOrRemove){
+  if(verifyIsClass(elemento,nameOfClass)){
+    if(addOrRemove == 1 && elemento != null){
+      elemento.addClass(nameOfClass);   
+    }
+    if(addOrRemove == 0 && elemento != null){
+      elemento.removeClass(nameOfClass);
+    }
+  }
+}
+
+
+//Verificar se existe a Class no Elemento
+// retorna true se existe classe
+function verifyIsClass(element, nameOfClass){
+  if(element != null){
+    if(element.attr('class').indexOf(nameOfClass) == -1){
+      return false;
+    }else{
+      return true;
+    }
+  }
+
+}
