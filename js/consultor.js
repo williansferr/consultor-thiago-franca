@@ -7,19 +7,18 @@ var myIndex = 0;
 
 var loadElement_about = document.getElementById('about');
 var loadElement_sobre = document.getElementById('sobre');
-var loadElement_price = document.getElementById('pricing');
-var loadElement_price = document.getElementById('pricing');
+var loadElement_sobre_small = document.getElementById('sobre-small');
+var loadElement_pacotes = document.getElementById('pacotes');
+var loadElement_smal_pacotes = document.getElementById('smal-pacotes');
 
 loadElement_about.ontouchmove = metodo_event_element_about;
-loadElement_about.onmouseenter = metodo_event_element_about;
-loadElement_about.onmouseleave = metodo_event_element_about;
+loadElement_about.onclick = metodo_event_element_about;
 
-loadElement_sobre.onclick = metodo_element_sobre;
-loadElement_sobre.ontouchmove = metodo_element_sobre;
-
-loadElement_price.onmouseenter = metodo_event_tabela_precos;
-
-// document.onkeyup = listener;
+loadElement_sobre.onclick = metodo_event_element_about;
+loadElement_sobre_small.onclick = metodo_event_element_about;
+// loadElement_sobre.ontouchmove = metodo_element_sobre;
+loadElement_pacotes.onclick = metodo_event_tabela_precos;
+loadElement_smal_pacotes.onclick = metodo_event_tabela_precos_smal;
 
 var $doc = $('html, body');
 $('a').click(function() {
@@ -30,42 +29,33 @@ $('a').click(function() {
 });
 
 function metodo_event_tabela_precos(e){
-  if(e.type === "mouseenter" ){
+  if(e.type === "click")
     adicionaEfeitoTabelaPrecos();
-  }
+}
 
+function metodo_event_tabela_precos_smal(e){
+  if(e.type === "click")
+    adicionaEfeitoTabelaPrecosSmall();
 }
 
 function metodo_event_element_about(e) {
 
- if(e.type === "touchmove"){
-    load_img_about_top();
- 
-  }else if(e.type === "mouseenter"){
+  $( "#imagem-about" ).attr( "src", "");
+  if(e.type === "click"){
     setTimeout(function(){
       load_img_about_left();
     },1000);
+
+  } 
   
-  }else if( e.type === "onmouseleave"){
-  $( "#imagem-about" ).attr( "src", "");
-  }
-}
-
-function metodo_element_sobre(e){
-  if(e.type === "click"){
-    load_img_about_top();
-  }else if(e.type === "touchmove"){
-    load_img_about_top();
-  }
 }
 
 
-//chama metodo carousel para slide shows e realizar a indexação das imagens
-showDivs(slideIndex);
-carousel();
+// function metodo_element_sobre(e){
+//   if(e.type === "click"){
+//   }
+// }
 
-//Ouvintes de ações para tela inicial
-$( "#imagem-about" ).attr( "src", "");
 
 var dropdown_login = document.getElementById('dropdown-login');
 dropdown_login.onmouseleave = metodo_eventOnDropdown;
@@ -78,22 +68,12 @@ function metodo_eventOnDropdown(e){
 }
 
 
-
-document.getElementById('dropdown-login').addEventListener("click", function(){
-});
-document.getElementById('about').addEventListener("mouseenter", function(){
-  view_span_left();
-});
-document.getElementById('myNavbar').addEventListener("mouseenter", function(){
-  view_span_top();
-  $( "#imagem-about" ).attr( "src", path_imgTh);
-});
-document.getElementById('myNavbar').addEventListener("mouseleave", function(){
-  $( "#imagem-about" ).attr( "src", path_imgTh );
-});
-
-
 //Metodo carousel
+var myIndex = 0;
+var myIndex2 = 0;
+carousel();
+carousel2();
+
 function carousel() {
     var i;
     var x = document.getElementsByClassName("mySlides");
@@ -106,30 +86,19 @@ function carousel() {
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 
-//indexação de imagens
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+function carousel2() {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex2++;
+    if (myIndex2 > x.length) {myIndex2 = 1}    
+    x[myIndex2-1].style.display = "block";  
+    setTimeout(carousel2, 2000); // Change image every 2 seconds
   }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
+
+
 
 // Modal Image Gallery
 function onClick(element) {
@@ -138,7 +107,6 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
-
 
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
@@ -170,14 +138,12 @@ function myFunction(id) {
     }
 }
 
-
-
 function load_img_about_left(){
   $( "#imagem-about" ).attr( "src", path_imgTh);
   var img_thiago = document.getElementById('imagem-about');
-  img_thiago.classList.add('w3-animate-zoom');
+  img_thiago.classList.add('w3-animate-left');
   setTimeout(function(){
-  img_thiago.classList.remove('w3-animate-zoom');
+  img_thiago.classList.remove('w3-animate-left');
   },200);
 }
 
@@ -200,14 +166,14 @@ function view_span_top(){
 
 }
 
-function view_span_left(){
-  var span = $('span');
-  span.addClass('w3-animate-left');
-  setTimeout(function(){
-  span.removeClass('w3-animate-left');
-  },300);
+// function view_span_left(){
+//   var span = $('span');
+//   span.addClass('w3-animate-left');
+//   setTimeout(function(){
+//   span.removeClass('w3-animate-left');
+//   },300);
 
-}
+// }
 
 
 function show_dropdown() {
@@ -226,10 +192,38 @@ function closeDropdown(){
 
 
 function adicionaEfeitoTabelaPrecos(){
-    setTimeout(function(){ one.addClass('w3-animate-top'); }, 1000);
-    setTimeout(function(){ second.addClass('w3-animate-left'); }, 2000);
-    setTimeout(function(){ third.addClass('w3-animate-bottom'); }, 3000);
-    removeClassOnTabelaPrecos();
+
+  one.hide();
+  second.hide();
+  third.hide();
+  setTimeout(function(){ 
+    one.show();
+    one.addClass('w3-animate-top'); }, 1000);
+  setTimeout(function(){ 
+    second.show();
+    second.addClass('w3-animate-left'); }, 2000);
+  setTimeout(function(){ 
+    third.show();
+    third.addClass('w3-animate-bottom'); }, 3000);
+  removeClassOnTabelaPrecos();
+      
+  }
+
+  function adicionaEfeitoTabelaPrecosSmall(){
+
+  one.hide();
+  second.hide();
+  third.hide();
+  setTimeout(function(){ 
+    one.show();
+    one.addClass('w3-animate-lef'); }, 1000);
+  setTimeout(function(){ 
+    second.show();
+    second.addClass('w3-animate-right'); }, 3000);
+  setTimeout(function(){ 
+    third.show();
+    third.addClass('w3-animate-left'); }, 5000);
+  removeClassOnTabelaPrecos();
       
   }   
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
 <title>Consultor Fitness Thiago França</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/estilo.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Kalam" rel="stylesheet">
 <script rel="stylesheet" language="javascript" href="js/jquery.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,6 +18,7 @@
 
 <body >
 
+<!-- Right-sided navbar links -->
 <div class="w3-top">
   <div class="w3-bar w3-blue w3-card" id="myNavbar">
       <div class="w3-dropdown-click">
@@ -44,13 +45,12 @@
           </div>
       </div>
     <a href="#home" class="w3-bar-item w3-button w3-wide">Inicio</a>
-    <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button" id="sobre"><i class="fa fa-graduation-cap" ></i> SOBRE</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-group"></i> CONSULTORIA</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-comments-o"></i> DEPOIMENTOS</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-comments-o"></i> A PRÁTICA</a>
       <a href="#duvidas" class="w3-bar-item w3-button"><i class="fa fa-question-circle"></i> DÚVIDAS</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-question-circle"></i> PACOTES</a>
+      <a href="#pricing" class="w3-bar-item w3-button" id="pacotes"><i class="fa fa-question-circle"></i> PACOTES</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTATO</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -66,22 +66,22 @@
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#home" class="w3-bar-item w3-button w3-wide">Inicio</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">SOBRE</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button" id="sobre-small">SOBRE</a>
   <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">CONSULTORIA</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">DEPOIMENTOS</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PACOTES</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">A PRÁTICA</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button" id="smal-pacotes">PACOTES</a>
   <a href="#duvidas" onclick="w3_close()" class="w3-bar-item w3-button">DÚVIDAS</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTATO</a>
-  <a href="#login" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
+  <!-- <a href="#login" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a> -->
 </nav>
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-xxlarge w3-hide-small w3-red">THIAGO FRANÇA</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium w3-red">THIAGO FRANÇA</span><br>
+    <span class="w3-xxlarge w3-red w3-hide-small w3-round ">THIAGO FRANÇA</span><br>
+    <span class="w3-xxlarge w3-red w3-hide-large w3-hide-medium w3-round estilo-fonte">THIAGO FRANÇA</span><br>
     <span class="w3-xlarge w3-blue">CONSULTOR FITNESS</span>
-    <p><a class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off w3-hide-small">Especialista em emagrecimento para mulheres</a></p>
+    <p><a class="w3-button w3-white w3-padding-large w3-margin-top w3-opacity w3-hover-opacity-off w3-hide-small">Emagrecimento Feminino</a></p>
   </div> 
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -94,10 +94,10 @@
 </header>
 
 <!-- About   Section -->
-<div class="w3-container" id="about" onfocus="loadPage()">
+<div class="w3-container w3-light-grey" id="about" onfocus="loadPage()">
     <!-- <h3 class="w3-center w3-red title-section" id="initial-name">THIAGO FRANÇA</h3> -->
     <div class="w3-half bgimg-about w3-grayscale-max" onfocus="loadPage()">
-        <img src="" id="imagem-about" class="w3-round-xxlarge" onfocus="loadPage()">  
+        <img src="./img/thiago2-1.jpg" id="imagem-about" class="w3-round-xxlarge" onfocus="loadPage()">  
     </div>
     <div class="w3-half w3-center w3-border-grey">
       <i class="fa fa-graduation-cap w3-margin-bottom w3-xxlarge about-logo w3-hide-small" ></i>
@@ -197,24 +197,25 @@
   </div>
 </div>
 
-<!-- Work Section -->
-<!-- <div class="w3-content w3-section" id="work"> -->
-  <div class="w3-mobile w3-display-middle  mural-slideshow"  id="work">
-    <div class="w3-row-padding border-slide-mural" style="">
-      <h3 class="w3-center w3-container w3-blue">TREINOS</h3>
-      <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/thiago2.jpg" style="width:100%">
-      <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/thiago5.jpg" style="width:100%">
-      <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/thiago3.jpg" style="width:100%">
-      <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-      <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-      <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-      </div>
-    </div>
+<!-- Work Section SlideShow  -->
+<div class="w3-row w3-padding-16" id="work">
+<h3 class="w3-l light-grey w3-center w3-padding-16"><p></p></h3>
+  <div class="w3-col" style="width:19%"><p></p></div>
+  <div class="w3-col w3-half w3-section w3-center" style="width:30%" >
+    <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/stories1.jpg" style="width:90%">
+    <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/stories2.jpg" style="width:90%;margin: 0">
+    <img class="mySlides imagens-personal w3-round-large" src="./img/img-new/stories3.jpg" style="width:90%">
   </div>
-<!-- </div> -->
+  <div class="w3-col" style="width:1%"><p></p></div>
+  <div class="w3-col w3-half w3-section w3-center" style="width:30%" id="work">
+    <img class="mySlides2 imagens-personal w3-round-large" src="./img/img-new/stories4.jpg" style="width:90%">
+    <img class="mySlides2 imagens-personal w3-round-large" src="./img/img-new/stories5.jpg" style="width:90%;">
+    <img class="mySlides2 imagens-personal w3-round-large" src="./img/img-new/stories6-1.jpg" style="width:90%">
+  </div>
+  <div class="w3-col" style="width:20%"></div>
+</div>
+
+<!-- End SlideShow -->
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -230,7 +231,7 @@
 <div class="w3-container w3-center w3-padding-64" id="duvidas">
   <h4 class="w3-container w3-light-grey w3-padding-16">DÚVIDAS FREQUENTES</h4>
   <div class="">
-    <button onclick="myFunction('demo1')" class="w3-button w3-block w3-black w3-left-align w3-padding-16">O que é Cadência?</button>
+    <button onclick="myFunction('demo1')" class="w3-button w3-block w3-blue w3-left-align w3-padding-16">O que é Cadência?</button>
     <div id="demo1" class="w3-hide w3-container">
         <p class="w3-left-align info-doubt w3-animate-zoom">
           A cadência consiste na velocidade de execução do movimento ou, basicamente, no tempo que se leva para realizar uma única repetição.
@@ -240,7 +241,7 @@
         </p>
     </div>
 
-    <button onclick="myFunction('demo2')" class="w3-button w3-block w3-blue w3-left-align w3-padding-16">É necessário treinar todos os dias para um bom resultado?</button>
+    <button onclick="myFunction('demo2')" class="w3-button w3-block w3-sand w3-left-align w3-padding-16">É necessário treinar todos os dias para um bom resultado?</button>
     <div id="demo2" class="w3-hide w3-container">
         <p class="w3-left-align info-doubt w3-animate-zoom">
         Não, você pode ter resultados treinando 1, 2, 3 vezes na semana. Minha função é planejar e traçar o melhor caminho a ser seguido, de acordo com sua realidade atual.
@@ -248,18 +249,18 @@
     </div>
   </div>
   <div class="">
-    <button onclick="myFunction('demo3')" class="w3-button w3-block w3-black w3-left-align w3-padding-16">Quando é necessário aumentar ou diminuir os pesos?</button>
+    <button onclick="myFunction('demo3')" class="w3-button w3-block w3-blue w3-left-align w3-padding-16">Quando é necessário aumentar ou diminuir os pesos?</button>
     <div id="demo3" class="w3-hide w3-container">
         <p class="w3-left-align info-doubt w3-animate-zoom">
         Na prescrição do treino, foi passado uma intensidade específica que você deve chegar independente do número de repetições, e também foi passado uma margem de repetições. Se para intensidade estabelecida você ficar fora da margem de repetições, você vai ajustar o peso, aumentando ou diminuindo. É tentativa e erro, mas em poucas sessões você vai saber os pesos ideias e fazer as alterações necessárias. É fundamental que a intensidade do treino sempre seja respeitada.
       </p>
     </div>
 
-    <button onclick="myFunction('demo4')" class="w3-button w3-block w3-blue w3-left-align w3-padding-16">Tem como flexibilizar os dias de treinos?</button>
+    <button onclick="myFunction('demo4')" class="w3-button w3-block w3-sand w3-left-align w3-padding-16">Tem como flexibilizar os dias de treinos?</button>
     <div id="demo4" class="w3-hide w3-container">
         <p class="w3-left-align info-doubt w3-animate-zoom">Sim, se você respeitar o intervalo estabelecido entre os treinos, pode fazer qualquer dia. Ex: treino de superiores é segunda e quinta (3 dias de intervalo).</p>
     </div>
-    <button onclick="myFunction('demo5')" class="w3-button w3-block w3-black w3-left-align w3-padding-16  ">Por que os treinos são de curta duração</button>
+    <button onclick="myFunction('demo5')" class="w3-button w3-block w3-blue w3-left-align w3-padding-16  ">Por que os treinos são de curta duração</button>
     <div id="demo5" class="w3-hide w3-container">
 
        <p class="w3-left-align info-doubt w3-animate-zoom">Já está mais que comprovado que treinos de curta duração trazem os mesmos resultados de treinos longos ou até mais. Para o exercício te ajudar a buscar você a alcançar seus objetivos, é importante continuidade e aderência ao programa, treinos longos tem pouca aderência. Treinos curtos e dinâmicos facilitam a aderência ao programa de treinamento, facilitando a obtenção de resultados, e poupando o que a maioria das pessoas alegam não ter, TEMPO.</p>
